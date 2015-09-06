@@ -1,0 +1,12 @@
+name = "Psi"
+license = "MIT License"
+licenselink = "//github.com/psimx/psi-theme/blob/master/LICENSE"
+description = "A simple web theme made for psicologainfantil.mx."
+homepage = "//github.com/psimx/psi-theme"
+tags = ["psi", "paralax"]
+min_version = 0.14
+
+[author]
+  name = "iver"
+  homepage = "//github.com/ivan-iver/"
+
