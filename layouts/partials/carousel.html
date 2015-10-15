@@ -1,0 +1,103 @@
+
+    <section id="terapias" class="dark">
+
+    <div class="page-header text-center">
+      <h3>Terapias</h3>
+      <h2>Más de 10 años de experiencia en terapias de:</h2>
+    </div>
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-offset-2 col-md-8">
+          <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+            {{ "<!-- Bottom Carousel Indicators --> " | safeHTML }}
+            <ol class="carousel-indicators">
+              <li data-target="#quote-carousel" data-slide-to="0" class=""></li>
+              <li data-target="#quote-carousel" data-slide-to="1" class=""></li>
+              <li data-target="#quote-carousel" data-slide-to="2" class="active"></li>
+              <li data-target="#quote-carousel" data-slide-to="3" class=""></li>
+            </ol>
+
+            {{ "<!-- Carousel Slides / Quotes -->" | safeHTML }}
+            <div class="carousel-inner">
+
+              {{ " <!-- Quote 1 -->" | safeHTML }}
+              <div class="item">
+                <blockquote>
+                  <div class="row">
+                    <div class="col-sm-3 text-center">
+                      <img class="img-circle" src="img/emocional_100x100.jpg" alt="Terapia Emocional">
+                    </div>
+                    <div class="col-sm-9">
+                      <p>La infancia es la etapa mas importante, se ponen las bases
+                      para el resto de la vida,  los problemas que se presenten
+                      en esta etapa y no se resuelvan tendrán consecuencias en el
+                      resto de la existencia.
+                      </p>
+                      <small><a href="/terapia-emocional/">Terapia Emocional</a></small>
+                    </div>
+                  </div>
+                </blockquote>
+              </div>
+              {{ "<!-- Quote 2 -->" | safeHTML }}
+              <div class="item">
+                <blockquote>
+                  <div class="row">
+                    <div class="col-sm-3 text-center">
+                      <img class="img-circle" src="img/lenguaje_100x100.jpg" alt="Terapia de Lenguaje">
+                    </div>
+                    <div class="col-sm-9">
+                      <p>Apoya a los niños que presentan dificultad en la pronunciación,
+                      significado o sentido, reglas y oraciones gramaticales
+                      y uso del lenguaje en determinado contexto.
+                      </p>
+                      <small>Terapia de Lenguaje</small>
+                    </div>
+                  </div>
+                </blockquote>
+              </div>
+              {{ "<!-- Quote 3 -->" | safeHTML }}
+              <div class="item active">
+                <blockquote>
+                  <div class="row">
+                    <div class="col-sm-3 text-center">
+                      <img class="img-circle" src="img/lecto_escritura_100x100.jpg" alt="Terapia de Aprendizaje">
+                    </div>
+                    <div class="col-sm-9">
+                      <p>Tiene como objetivo en todo el proceso proporcionar una atención específica
+                      y brindar estrategias educativas  en las cuales se presenta una dificultad de aprendizaje.
+                      </p>
+                      <small>Terapia de Aprendizaje</small>
+                    </div>
+                  </div>
+                </blockquote>
+              </div>
+              {{ "<!-- Quote 4 -->" | safeHTML }}
+              <div class="item">
+                <blockquote>
+                  <div class="row">
+                    <div class="col-sm-3 text-center">
+                      <img class="img-circle" src="img/psicomotricidad_100x100.jpg" alt="Terapia de Psicomotricidad">
+                    </div>
+                    <div class="col-sm-9">
+                      <p>Los niños entre 3 y 6 años logran grandes avances en su capacidad motriz
+                      que se refieren a 2 tipos de motricidad: psicomotricidad fina y gruesa.
+                      </p>
+                      <small>Terapia de Psicomotricidad</small>
+                    </div>
+                  </div>
+                </blockquote>
+              </div>
+            </div>
+
+            {{ "<!-- Carousel Buttons Next/Prev -->" | safeHTML }}
+            <a data-slide="prev" href="#quote-carousel" class="left carousel-control visible-md visible-lg"><i class="fa fa-chevron-left"></i></a>
+            <a data-slide="next" href="#quote-carousel" class="right carousel-control  visible-md visible-lg"><i class="fa fa-chevron-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    </section>

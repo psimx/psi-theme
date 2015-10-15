@@ -1,0 +1,40 @@
+
+  {{ "<!-- ========== Call to Action ========== -->" | safeHTML }}
+    <section class="cta text-center">
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-lg-12">
+          <p>La infancia es la etapa en la que se ponen las bases para
+          el resto de la vida. </br>
+          <span class="highlight">Una intervención a tiempo puede hacer la diferencia.</span></p>
+          <br>
+          <h2>¿Deseas más información?</h2>
+          <p><button class="btn contact-button" type="button" role="button">Cont&aacute;ctanos</button></p>
+          <div class='contact-form'>
+            <form name="sentMessage" id="contactForm"  >
+              <div class='name'>
+                <input class='form-control first' placeholder='Nombre' type='text' id="first_name" autofocus required data-validation-required-message="Por favor ingrese su nombre.">
+                <input class='last' placeholder='Apellido' type='text' id="last_name" required data-validation-required-message="Por favor ingrese su apellido.">
+              </div>
+              <div class='contact'>
+                <input class='form-control email' placeholder='Correo Electrónico' type='text' id="email" required data-validation-required-message="Por favor ingrese su correo electrónico.">
+              </div>
+              <div class='message'>
+                <textarea class="form-control" placeholder='Su mensaje' id="message" required data-validation-required-message="Por favor ingrese su mensaje." maxlength="999" style="resize:none"></textarea>
+              </div>
+              <div id="success"> </div> {{ "<!-- For success/fail messages -->" | safeHTML }}
+              <footer class="submit-button">
+              <button type="submit">Enviar</button>
+              </footer>
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    </section>
+
