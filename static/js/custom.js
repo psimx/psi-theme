@@ -18,8 +18,6 @@ $(document).ready(function() {
 
 function init() {
   tooltips();
-  onePageScroll();
-  scrollAnchor();
   toggleContactForm();
 }
 
@@ -47,14 +45,14 @@ function fullScreenContainer() {
 
     var screenWidth = $(window).width() + "px";
     var screenHeight = $(window).height() + "px";
-      
+
     // Set Slides to new Screen Dimensions
-    
+
     $("#intro, #intro .item, #introduction, #introduction .item").css({
       width: screenWidth,
       height: screenHeight
-    }); 
-      
+    });
+
   });
 
 }
@@ -68,8 +66,8 @@ function owlCarousel() {
       lazyLoad : true,
       items: 3,
       theme: "owl-theme-main"
-    }); 
-  
+    });
+
     $("#intro").owlCarousel({
       lazyLoad: true,
       lazyEffect: "fade",
@@ -80,8 +78,8 @@ function owlCarousel() {
       pagination: false,
       transitionStyle: "fade",
       theme: "owl-theme-featured"
-      
-    }); 
+
+    });
 }
 
 
@@ -89,7 +87,7 @@ function owlCarousel() {
 /* --- Tooltips ------------------- */
 
 function tooltips() {
-  $('.tooltips').tooltip(); 
+  $('.tooltips').tooltip();
 }
 
 
@@ -110,7 +108,7 @@ function toggleContactForm() {
 /* --- scrollReveal ------------------- */
 
 window.scrollReveal = new scrollReveal();
-  
+
 
 
 /* --- magnific popup ------------------- */
@@ -155,7 +153,7 @@ function magnificPopup() {
       enabled: true, // By default it's false, so don't forget to enable it
 
       duration: 300, // duration of the effect, in milliseconds
-      easing: 'ease-in-out', // CSS transition easing function 
+      easing: 'ease-in-out', // CSS transition easing function
 
       // The "opener" function should return the element from which popup will be zoomed in
       // and to which popup will be scaled down
@@ -179,7 +177,7 @@ function magnificPopup() {
 
 		closeBtnInside: true,
 		preloader: false,
-		
+
 		midClick: true,
 		removalDelay: 300,
 		mainClass: 'my-mfp-slide-bottom'
@@ -211,27 +209,6 @@ function isotope() {
    $(this).addClass('active');
  });
 
-}
-
-
-/* --- Scroll to Anchor ------------------- */
-
-function scrollAnchor() {
-
-  // scroll to specific anchor
-  $('.scroll').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html,body').animate({
-          scrollTop: target.offset().top
-        }, 650);
-        return false;
-      }
-    }
-  });
-  
 }
 
 
@@ -338,46 +315,10 @@ function loginOverlay() {
 }
 
 
-
-/* --- One Page Scroll ------------------- */
-
-function onePageScroll() {
-  $('.nav').onePageNav({
-      currentClass: 'current',
-      changeHash: false,
-      scrollSpeed: 650,
-      scrollOffset: 30,
-      scrollThreshold: 0.5,
-      filter: ':not(.login, .signup)',
-      easing: 'swing',
-      begin: function() {
-          //I get fired when the animation is starting
-      },
-      end: function() {
-          //I get fired when the animation is ending
-      },
-      scrollChange: function($currentListItem) {
-          //I get fired when you enter a section and I pass the list item of the section
-      }
-  });
-}
-
-
-$(window).scroll(function() {
-  var windowpos = $(window).scrollTop() ;
-
-  if (windowpos <= 500) {
-      $('.nav li.current').removeClass('current');
-  }
-});
-
-
-
-
 //Placeholder fixed for Internet Explorer
 $(function() {
 	var input = document.createElement("input");
-	if(('placeholder' in input)==false) { 
+	if(('placeholder' in input)==false) {
 		$('[placeholder]').focus(function() {
 			var i = $(this);
 			if(i.val() == i.attr('placeholder')) {
@@ -385,10 +326,10 @@ $(function() {
 				if(i.hasClass('password')) {
 					i.removeClass('password');
 					this.type='password';
-				}			
+				}
 			}
 		}).blur(function() {
-			var i = $(this);	
+			var i = $(this);
 			if(i.val() == '' || i.val() == i.attr('placeholder')) {
 				if(this.type=='password') {
 					i.addClass('password');
@@ -410,7 +351,7 @@ $(function() {
 
 /*
   Jquery Validation using jqBootstrapValidation
-   example is taken from jqBootstrapValidation docs 
+   example is taken from jqBootstrapValidation docs
   */
 $(function() {
 
@@ -424,9 +365,9 @@ $(function() {
      submitSuccess: function($form, event) {
       event.preventDefault(); // prevent default submit behaviour
        // get values from FORM
-       var first_name = $("input#first_name").val();  
-       var last_name = $("input#last_name").val();  
-       var email = $("input#email").val(); 
+       var first_name = $("input#first_name").val();
+       var last_name = $("input#last_name").val();
+       var email = $("input#email").val();
        var message = $("textarea#message").val();
 
        console.log("Name: "+ first_name + " last_name: " + last_name + " email: "+ email + " message: " + message);
@@ -435,13 +376,13 @@ $(function() {
     //        // Check for white space in name for Success/Fail message
     //     if (firstName.indexOf(' ') >= 0) {
 	   // firstName = name.split(' ').slice(0, -1).join(' ');
-    //      }        
+    //      }
 	 $.ajax({
        url: "http://api.psicologainfantil.mx",
        type: "POST",
        data: {first_name: first_name, last_name: last_name, email: email, message: message},
        cache: false,
-       success: function() {  
+       success: function() {
         // Success message
            $('#success').html("<div class='alert alert-success'>");
            $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;").append( "</button>");
@@ -450,11 +391,11 @@ $(function() {
            //clear all fields
            $('#contactForm').trigger("reset");
         },
-        error: function() {		
+        error: function() {
  		    // Fail message
            $('#success').html("<div class='alert alert-danger'>");
            $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;").append( "</button>");
-           var msg = "<strong>Disculpa " + first_name + 
+           var msg = "<strong>Disculpa " + first_name +
                                                 " parece que nuestro servidor no está respondiendo ...</strong><br>" +
                                                 " Podrías contactarnos por facebook. Lamentamos el inconveniente!";
            console.log("msg: " + msg);
@@ -475,9 +416,31 @@ $(function() {
                     $(this).tab("show");
         });
   });
- 
 
-/*When clicking on Full hide fail/success boxes */ 
+
+/*When clicking on Full hide fail/success boxes */
 $('#name').focus(function() {
-     $('#success').html('');
+  $('#success').html('');
+});
+
+// jQuery for page scrolling feature - requires jQuery Easing plugin
+$(function() {
+  $('a.page-scroll').bind('click', function(event) {
+    var $anchor = $(this);
+    $('html, body').stop().animate({
+      scrollTop: $($anchor.attr('href')).offset().top
+    }, 1500, 'easeInOutExpo');
+    event.preventDefault();
   });
+});
+
+// Highlight the top nav as scrolling occurs
+$('body').scrollspy({
+  target: '.navbar-fixed-top'
+})
+
+// Closes the Responsive Menu on Menu Item Click
+$('.navbar-collapse ul li a').click(function() {
+  $('.navbar-toggle:visible').click();
+});
+

@@ -2718,3 +2718,7 @@ footer.footer .icon {
   background-color: transparent !important;
   color: white;
 }
+
+.light-text {
+  color: #88b7b3 !important;
+}

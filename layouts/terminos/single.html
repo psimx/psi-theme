@@ -7,19 +7,23 @@
           {{ partial "head.html" . }}
         </head>
         <body>
+          {{ partial "nav_page.html" . }}
+          {{ partial "top_page.html" . }}
 
-          {{ partial "nav.html" . }}
-          {{ partial "top.html" . }}
-          {{ partial "values.html" . }}
-          {{ partial "features.html" . }}
-          {{ partial "clinica.html" . }}
-          {{ partial "carousel.html" . }}
-          {{ partial "contact.html" . }}
+          <div class="container">
+            <h3 class="masthead-title">
+              <a href="{{ .Permalink }}" class="fixed-link">{{ .Title }}</a>
+            </h3>
+            <div>
+              <article id="content">
+              {{ .Content }}
+              </article>
+            </div>
+          </div>
+
           {{ partial "footer.html" . }}
           {{ partial "microdata.html" . }}
           {{ partial "includes.html" . }}
-          {{ partial "analytics.html" . }}
-          {{ partial "embeded.html" . }}
 
         </body>
       </html>
