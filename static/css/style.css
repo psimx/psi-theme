@@ -76,7 +76,7 @@
  color: #444;
  text-decoration: none;
  border-radius: .3em;
- transition: all .3s ease-out;   
+ transition: all .3s ease-out;
 }
 
 .rounded-list a:hover{
@@ -84,13 +84,13 @@
 }
 
 .rounded-list a:hover:before{
-      transform: rotate(360deg);  
+      transform: rotate(360deg);
 }
 
 .rounded-list a:before{
           content: counter(li);
           counter-increment: li;
-          position: absolute; 
+          position: absolute;
           left: -1.3em;
           top: 50%;
           margin-top: -1.3em;
@@ -133,6 +133,13 @@
   color: #fff;
   text-align: center;
 }
+
+@media (max-width: 767px){
+  .post-header{
+    width: 90% !important;
+  }
+}
+
 .post-menu{
   background-color: #fff;
   border-color: transparent;
@@ -140,3 +147,4 @@
  .debug{
   border: 1px solid red;
  }
+
