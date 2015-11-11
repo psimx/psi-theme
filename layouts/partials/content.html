@@ -2,13 +2,20 @@
           <div class="container">
 
             <div class="row col-sm-12 col-md-12">
-                <h1 class="text-center">
-                  <a href="{{ .Permalink }}" class="fixed-link">{{ .Title }}</a>
-                </h1>
             </div> <!-- End Row-->
 
             <div class="row">
               <article id="content" class="col-md-offset-2 col-md-8 text-justify">
+                <header>
+                  <h1 class="text-center">
+                    <a href="{{ .Permalink }}" class="fixed-link">{{ .Title }}</a>
+                  </h1>
+                  <div class="row">
+                      <time pubdate datetime="{{ dateFormat "Monday, Jan 2, 2006" .Params.modify }}">
+                        <i class="fa fa-calendar-check-o fa-lg"></i>&nbsp; {{ dateFormat "01-02-2006" .Params.modify }}
+                      </time>
+                  </div>
+                </header>
               {{ .Content }}
               </article>
             </div>
