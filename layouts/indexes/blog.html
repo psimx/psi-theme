@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{{ "<!--[if IE 8]> <html class=\"no-js lt-ie9 ie8\" lang=\"es\"> <![endif]-->" | safeHTML }}
+  {{  "<!--[if IE 9]> <html class=\"ie9\" lang=\"es\"> <![endif]-->" | safeHTML }}
+    {{ "<!--[if IE 10]> <html class=\"ie10\" lang=\"es\"> <![endif]-->" | safeHTML }}
+      {{  "<!--[if (gt IE 10)|!(IE)]> <html itemscope itemtype=\"http://schema.org/Blog\" xmlns=\"http://www.w3.org/1999/xhtml\" dir=\"ltr\" lang=\"es-MX\" xmlns:fb=\"https://www.facebook.com/2008/fbml\"> <![endif]-->" | safeHTML }}
+        <head prefix="og:http://ogp.me/ns# anotherfeed:http://ogp.me/ns/apps/anotherfeed#">
+          {{ partial "head.html" . }}
+        </head>
+        <body>
+          {{ partial "nav_page.html" . }}
+          {{ partial "top_page.html" . }}
+          {{ partial "return.html" . }}
+          Contenido de blog
+          {{ partial "contact.html" . }}
+          {{ partial "psi_box.html" . }}
+          {{ partial "footer.html" . }}
+          {{ partial "microdata.html" . }}
+          {{ partial "includes.html" . }}
+
+        </body>
+      </html>
