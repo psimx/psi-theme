@@ -318,7 +318,7 @@ blockquote {
 .navbar {
   background: none;
   border: none;
-  padding: 22px 0;
+  padding: 10px 0;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:focus {

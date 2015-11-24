@@ -144,11 +144,39 @@
   background-color: #fff;
   border-color: transparent;
 }
- .debug{
-  border: 1px solid red;
- }
 
 time {
-   padding: 2px 15px 0 0;
-   float: right;
+  padding: 2px 15px 0 0;
+  float: right;
+}
+
+.banner-404 {
+  font-size: xx-large;
+  padding: 50px 0;
+}
+
+.meta-info{
+  margin: 30px;
+}
+.meta-info ul{
+    list-style: outside none none;
+    padding: 3px;
+}
+
+.meta-info ul li{
+display: inline-block;
+    margin-left: 5px;
+}
+
+.meta-info ul li::after{
+  color: #c7cad0;
+  content: "|";
+  margin-left: 10px;
+}
+
+.debug{
+  border: 1px solid red;
+ }
+ .debug-green{
+   border: solid 1px green;
 }
