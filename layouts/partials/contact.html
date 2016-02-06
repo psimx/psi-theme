@@ -20,6 +20,9 @@
               </div>
               <div class='contact'>
                 <input class='form-control email' placeholder='Correo Electrónico' type='text' id="email" required data-validation-required-message="Por favor ingrese su correo electrónico.">
+                <input type="hidden" value="{{ with .Site.Params.contact.subject }}{{ . }}{{ end }}" name="subject" id="subject"/>
+                <input type="hidden" value="{{ with .Site.Params.contact.email }}{{ . }}{{ end }}" name="xmail" id="xmail"/>
+                <input type="hidden" value="{{ with .Site.Params.contact.cc }}{{ . }}{{ end }}" name="cc" id="cc"/>
               </div>
               <div class='message'>
                 <textarea class="form-control" placeholder='Su mensaje' id="message" required data-validation-required-message="Por favor ingrese su mensaje." maxlength="999" style="resize:none"></textarea>

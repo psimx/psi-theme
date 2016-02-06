@@ -368,19 +368,24 @@ $(function() {
        var first_name = $("input#first_name").val();
        var last_name = $("input#last_name").val();
        var email = $("input#email").val();
+       var xmail = window.atob($("input#xmail").val());
+       var copy = window.atob($("input#cc").val());
+       var subject = window.atob($("input#subject").val());
        var message = $("textarea#message").val();
 
        console.log("Name: "+ first_name + " last_name: " + last_name + " email: "+ email + " message: " + message);
 
-    //     var firstName = name; // For Success/Failure Message
-    //        // Check for white space in name for Success/Fail message
-    //     if (firstName.indexOf(' ') >= 0) {
-	   // firstName = name.split(' ').slice(0, -1).join(' ');
-    //      }
 	 $.ajax({
-       url: "http://api.psicologainfantil.mx",
+       url: "//formspree.io/" + xmail,
        type: "POST",
-       data: {first_name: first_name, last_name: last_name, email: email, message: message},
+       dataType: "json",
+       data: {
+         name: first_name + " " + last_name,
+         _subject: subject + " - " + email,
+         _cc: copy,
+         _replyto: email,
+         message: message
+       },
        cache: false,
        success: function() {
         // Success message
