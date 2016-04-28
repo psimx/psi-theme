@@ -3,7 +3,7 @@
 
 $(window).load(function(){
     $('.preloader').fadeOut(1000); // set duration in brackets
-    init();
+    tooltips();
 });
 
 $(document).ready(function() {
@@ -11,17 +11,6 @@ $(document).ready(function() {
   owlCarousel();
   magnificPopup();
 });
-
-
-
-/* --- initialize functions on window load here -------------- */
-
-function init() {
-  tooltips();
-  toggleContactForm();
-}
-
-
 
 /* --- Full Screen Container ------------- */
 
@@ -89,21 +78,6 @@ function owlCarousel() {
 function tooltips() {
   $('.tooltips').tooltip();
 }
-
-
-
-
-/* --- Show/Hide Contact Form ------------------- */
-
-function toggleContactForm() {
-  $('.contact-button').click(function() {
-    $(this).toggleClass('active');
-    $('.contact-form').slideToggle(300);
-  });
-}
-
-
-
 
 /* --- scrollReveal ------------------- */
 

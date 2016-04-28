@@ -1820,7 +1820,6 @@ section .overlay-text {
   margin: 2em auto;
   overflow: hidden;
   border-radius: 4px;
-  display: none;
 }
 .contact-form .message,
 .contact-form .contact,
