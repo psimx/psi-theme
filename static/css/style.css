@@ -27,6 +27,12 @@
     background: url(../img/aprendizaje_170x170.jpg) no-repeat;
 }
 
+#art-home a:hover {
+    color: #EE9AAA!important;
+    background-color: rgba(238, 154,170,0.1) !important;
+    text-decoration: none !important;
+}
+
 .desaturate {
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
@@ -34,7 +40,7 @@
     filter: url(desaturate.svg#greyscale);
 }
 
-.clinica h2 {
+.title h2 {
    font-size: 34px;
    text-align: center;
    text-transform: capitalize;

@@ -16,7 +16,7 @@
 <meta property="og:url" content="{{ .Site.BaseURL }}" />
 <meta property="og:site_name" content="{{ .Site.Params.name }}" />
 <meta property="og:type" content="website" /> {{ $fecha := .Date.Format "2006-01-02" }}
-<meta property="og:updated_time" content="{{ if eq $fecha " 0001-01-01 " }}{{ .Site.LastChange.Format "2006-01-02 " }}{{ else }}{{ .Date.Format "2006-01-02 " }}{{ end }}" />
+<meta property="og:updated_time" content="{{ if eq $fecha "0001-01-01" }}{{ .Site.LastChange.Format "2006-01-02 " }}{{ else }}{{ .Date.Format "2006-01-01" }}{{ end }}" />
 <meta property="og:description" content="{{ with .Site.Params.og_description }}{{ . }}{{ end }}">
 
 <meta name="description" content="{{ with .Site.Params.description }}{{ . }}{{ end }}">

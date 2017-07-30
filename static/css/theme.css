@@ -1513,97 +1513,16 @@ section .overlay-text {
   transform: translateX(-50%);
   box-shadow: -80px 0px 0 #dadada, 80px 0px 0 #dadada;
 }
-#pricing .plan {
-  background: white;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  border-radius: 7px;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-}
-#pricing .plan .plan-title {
-  margin: 0;
-  border-radius: 7px 7px 0 0;
-  overflow: hidden;
-  text-align: center;
-  background: #f5f5f5;
-}
-#pricing .plan .plan-title h2 {
-  padding: 1.3em 0.5em 0;
-  margin: 0;
-  font-size: 1.3em;
-  font-weight: 200;
-  text-align: center;
-  color: #7c7c7c;
-}
-#pricing .plan .plan-title h3 {
-  font-weight: 200;
-  font-size: 4em;
-  line-height: 1.5em;
-  margin-top: 0;
-  color: #333333;
-}
-#pricing .plan .plan-title p {
-  font-size: 1.1em;
-  font-weight: 200;
-}
-#pricing .plan .plan-title div {
-  padding: 2.2em 1em 0;
-  text-align: right;
-}
-#pricing .plan .plan-title input {
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-#pricing .plan .plan-title sup {
-  top: -1.5em;
-  font-size: 0.3em;
-  padding-left: 0.2em;
-}
-#pricing .plan .plan-title sub {
-  bottom: -0.1em;
-  font-size: 0.2em;
-}
-#pricing .plan .plan-features {
-  text-align: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-#pricing .plan .plan-features li {
-  padding: 1.3em 0;
-  font-size: 1em;
-  font-weight: 200;
-  border-bottom: 1px solid #eaeaea;
-}
-#pricing .plan .plan-cta {
-  display: block;
-  margin: 0;
-  text-align: center;
-  border-radius: 0 0 7px 7px;
-  overflow: hidden;
-}
-#pricing .plan .plan-cta .plan-buy {
-  margin: 2em 0;
-}
-#pricing .plan .plan-cta .plan-buy .btn {
-  background: #88b7b3;
-  padding: 10px 30px;
-  font-size: 1em;
-  font-weight: 300;
-  color: white;
-}
-#pricing .plan .plan-cta .plan-buy .btn:hover {
-  background: #68a49f;
-}
-#pricing .plan.featured {
-  padding: 1.5em 0 0;
-  margin-top: -1.5em;
-}
-#pricing .plan.featured .plan-title {
-  margin: -1.5em 0 0;
-  padding-top: 1.5em;
+.cards {
+  min-height: 340px;
+  background: url('../img/cards.jpg') center center no-repeat !important;
+  background-size: cover !important;
+
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(52px);
+  filter: blur(2px);
 }
 #terapias .carousel .carousel-control {
   font-size: 3em;
