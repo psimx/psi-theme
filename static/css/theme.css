@@ -1,6 +1,7 @@
 body {
   background: #f6f6f6;
   font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-rendering: optimizeLegibilityi !important;
 }
 .no-padding {
   padding: 0 !important;
@@ -114,6 +115,7 @@ a:hover {
 blockquote {
   border-left: none;
 }
+
 .colour-white {
   color: white !important;
 }
@@ -1513,97 +1515,57 @@ section .overlay-text {
   transform: translateX(-50%);
   box-shadow: -80px 0px 0 #dadada, 80px 0px 0 #dadada;
 }
-#pricing .plan {
-  background: white;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  border-radius: 7px;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+.cards {
+  min-height: 340px;
+  background: url('../img/cards.jpg') center center no-repeat !important;
+  background-size: cover !important;
 }
-#pricing .plan .plan-title {
-  margin: 0;
-  border-radius: 7px 7px 0 0;
-  overflow: hidden;
-  text-align: center;
-  background: #f5f5f5;
+
+.pay-ul {
+  list-style: none;
+  padding: 0;
 }
-#pricing .plan .plan-title h2 {
-  padding: 1.3em 0.5em 0;
-  margin: 0;
-  font-size: 1.3em;
-  font-weight: 200;
-  text-align: center;
-  color: #7c7c7c;
+.pay-li{
+  padding-left: 1.3em;
 }
-#pricing .plan .plan-title h3 {
-  font-weight: 200;
-  font-size: 4em;
-  line-height: 1.5em;
-  margin-top: 0;
-  color: #333333;
+.pay-li:before{
+  content: "\f00c"; /* FontAwesome Unicode */
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: -1.3em; /* same as padding-left set on li */
+  width: 1.3em; /* same as padding-left set on li */
 }
-#pricing .plan .plan-title p {
-  font-size: 1.1em;
-  font-weight: 200;
-}
-#pricing .plan .plan-title div {
-  padding: 2.2em 1em 0;
-  text-align: right;
-}
-#pricing .plan .plan-title input {
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-#pricing .plan .plan-title sup {
-  top: -1.5em;
-  font-size: 0.3em;
-  padding-left: 0.2em;
-}
-#pricing .plan .plan-title sub {
-  bottom: -0.1em;
-  font-size: 0.2em;
-}
-#pricing .plan .plan-features {
-  text-align: center;
+.tc-ul {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-#pricing .plan .plan-features li {
-  padding: 1.3em 0;
-  font-size: 1em;
-  font-weight: 200;
-  border-bottom: 1px solid #eaeaea;
-}
-#pricing .plan .plan-cta {
-  display: block;
-  margin: 0;
+  list-style-type: none;
   text-align: center;
-  border-radius: 0 0 7px 7px;
-  overflow: hidden;
 }
-#pricing .plan .plan-cta .plan-buy {
-  margin: 2em 0;
+.tc-ul li {
+  display: inline;
 }
-#pricing .plan .plan-cta .plan-buy .btn {
-  background: #88b7b3;
-  padding: 10px 30px;
-  font-size: 1em;
-  font-weight: 300;
-  color: white;
+.tc-ul li.visa, .tc-ul li.mastercard, .tc-ul li.amex {
+  background-image: url(../img/credit_card_icons.jpg);
+  background-repeat: no-repeat;
 }
-#pricing .plan .plan-cta .plan-buy .btn:hover {
-  background: #68a49f;
+.tc-ul li.visa {
+  height: 38px;
+  width: 54px;
+  display: inline-block;
+  background-position: -308px -128px;
 }
-#pricing .plan.featured {
-  padding: 1.5em 0 0;
-  margin-top: -1.5em;
+.tc-ul li.mastercard {
+  height: 38px;
+  width: 54px;
+  display: inline-block;
+  background-position: -458px -181px;
 }
-#pricing .plan.featured .plan-title {
-  margin: -1.5em 0 0;
-  padding-top: 1.5em;
+.tc-ul li.amex {
+  height: 38px;
+  width: 54px;
+  display: inline-block;
+  background-position: -674px -291px;
 }
 #terapias .carousel .carousel-control {
   font-size: 3em;
@@ -2547,7 +2509,16 @@ footer.footer .icon {
   border-bottom: 1px solid #d2d2d2;
   border-top: 1px solid #d2d2d2;
   overflow: hidden;
-  font-size: x-small;
+  font-size: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.post-meta {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 #psi ul li {

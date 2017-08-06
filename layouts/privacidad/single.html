@@ -5,24 +5,15 @@
       {{  "<!--[if (gt IE 10)|!(IE)]> <html itemscope itemtype=\"http://schema.org/Blog\" xmlns=\"http://www.w3.org/1999/xhtml\" dir=\"ltr\" lang=\"es-MX\" xmlns:fb=\"https://www.facebook.com/2008/fbml\"> <![endif]-->" | safeHTML }}
         <head prefix="og:http://ogp.me/ns# anotherfeed:http://ogp.me/ns/apps/anotherfeed#">
           {{ partial "head.html" . }}
-          {{ partial "analytics.html" . }}
         </head>
-        <!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
-        <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-
-          {{ partial "nav.html" . }}
-          {{ partial "top.html" . }}
-          {{ partial "values.html" . }}
-          {{ partial "features.html" . }}
-          {{ partial "clinica.html" . }}
-          {{ partial "carousel.html" . }}
-          {{ partial "payment.html" . }}
-          {{ partial "contact.html" . }}
+        <body>
+          {{ partial "nav_page.html" . }}
+          {{ partial "top_page.html" . }}
+          {{ partial "content.html" . }}
+          {{ partial "ads.html" . }}
           {{ partial "footer.html" . }}
           {{ partial "microdata.html" . }}
           {{ partial "includes.html" . }}
-          {{ partial "embeded.html" . }}
-          {{ partial "campaign.html" . }}
 
         </body>
       </html>

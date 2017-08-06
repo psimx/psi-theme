@@ -2,9 +2,11 @@
   {{ "<!-- Corporate contacts  -->" | safeHTML }}
     <script type="application/ld+json">
       { "@context" : "http://schema.org",
+        "@id": "{{ .Site.BaseURL }}#organization",
         "@type" : "Organization",
-        "url" : "http://psicologainfantil.mx",
-        "logo": "http://psicologainfantil.mx/img/logo.png",
+        "name": "{{ .Site.Title }}",
+        "url" : "{{ .Site.BaseURL }}",
+        "logo": "{{ .Site.BaseURL }}{{ with .Site.Params.og_image }}{{ . }}{{ end }}",
         "contactPoint" : [
         { "@type" : "ContactPoint",
           "telephone" : "+52-55-55-35-0814",
@@ -12,8 +14,20 @@
           "areaServed" : "MX",
           "availableLanguage": ["Spanish"]
         } ],
-        "sameAs" : [ "http://www.facebook.com/terapiasvisuales",
-          "https://mx.linkedin.com/in/terapiavisual",
-          "http://plus.google.com/117529918649575216088"]
+        "sameAs" : [
+          "{{ with .Site.Params.social.plus }}{{ . }}{{ end }}",
+          "{{ with .Site.Params.social.twitter }}{{ . }}{{ end }}",
+          "{{ with .Site.Params.social.facebook }}{{ . }}{{ end }}",
+          "{{ with .Site.Params.social.linkedin }}{{ . }}{{ end }}",
+        ]
       }
     </script>
+    <script type="application/ld+json">
+	{
+		"@context": "http://schema.org",
+		"@id": "{{ .Site.BaseURL }}#webpage",
+		"@type": "WebPage",
+		"url": "{{ .Site.BaseURL }}",
+    "name": "{{ .Site.Title }}"
+	}
+</script>
