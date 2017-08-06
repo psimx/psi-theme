@@ -1,0 +1,29 @@
+# Site settings
+#
+baseurl = "http://samplesite.com/"
+languageCode = "en-us"
+title = "My Excellent WebSite"
+theme = "psi"
+
+[params]
+  name = "My site name"
+  description = "A beatifull website description"
+  og_description = "A website meta description"
+  og_image = "img/preview_image.jpg"
+
+  favicon = "/img/favicon.ico"
+
+  [params.google]
+    plus = "//plus.google.com/<google-id>/posts"
+
+  # Contact section base64
+  [params.contact]
+    email = "email_at_base64_com"
+    cc = "cc_email_at_base64_com"
+    subject = "Subject Text"
+
+  [params.social]
+    twitter = "//www.twitter.com/<twitter-id>"
+    facebook = "//www.facebook.com/<facebook-id>"
+    linkedin = "//mx.linkedin.com/in/<linkedin-id>"
+    plus = "//plus.google.com/<google-id>"
