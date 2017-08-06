@@ -1,8 +1,8 @@
-/* -- Full Screen Viewport Container 
+/* -- Full Screen Viewport Container
    ---------------------------- */
 
 $(window).load(function() {
-    $('.preloader').fadeOut(500); // set duration in brackets 
+    $('.preloader').fadeOut(10); // set duration in brackets
     tooltips();
 });
 
@@ -16,7 +16,7 @@ $(document).ready(function() {
 
 function fullScreenContainer() {
 
-    // Set Initial Screen Dimensions 
+    // Set Initial Screen Dimensions
 
     var screenWidth = $(window).width() + "px";
     var screenHeight = $(window).height() + "px";
@@ -26,16 +26,16 @@ function fullScreenContainer() {
         height: screenHeight
     });
 
-    // Every time the window is resized... 
+    // Every time the window is resized...
 
     $(window).resize(function() {
 
-        // Fetch Screen Dimensions 
+        // Fetch Screen Dimensions
 
         var screenWidth = $(window).width() + "px";
         var screenHeight = $(window).height() + "px";
 
-        // Set Slides to new Screen Dimensions 
+        // Set Slides to new Screen Dimensions
 
         $("#intro, #intro .item, #introduction, #introduction .item").css({
             width: screenWidth,
@@ -89,7 +89,7 @@ window.scrollReveal = new scrollReveal();
 
 function magnificPopup() {
 
-    // Gallery 
+    // Gallery
     $('.popup-gallery').magnificPopup({
         type: 'image',
         tLoading: 'Loading image #%curr%...',
@@ -99,7 +99,7 @@ function magnificPopup() {
         gallery: {
             enabled: true,
             navigateByImgClick: true,
-            preload: [0, 1] // Will preload 0 - before current, and 1 after the current image 
+            preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
         },
         image: {
             tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
@@ -117,24 +117,24 @@ function magnificPopup() {
         $(this).parent().siblings('.info').addClass('active');
     });
 
-    // Zoom Gallery 
+    // Zoom Gallery
 
     $('.zoom-modal').magnificPopup({
         type: 'image',
-        mainClass: 'mfp-with-zoom', // this class is for CSS animation below 
+        mainClass: 'mfp-with-zoom', // this class is for CSS animation below
 
         zoom: {
-            enabled: true, // By default it's false, so don't forget to enable it 
+            enabled: true, // By default it's false, so don't forget to enable it
 
-            duration: 300, // duration of the effect, in milliseconds 
-            easing: 'ease-in-out', // CSS transition easing function 
+            duration: 300, // duration of the effect, in milliseconds
+            easing: 'ease-in-out', // CSS transition easing function
 
-            // The "opener" function should return the element from which popup will be zoomed in 
-            // and to which popup will be scaled down 
-            // By defailt it looks for an image tag: 
+            // The "opener" function should return the element from which popup will be zoomed in
+            // and to which popup will be scaled down
+            // By defailt it looks for an image tag:
             opener: function(openerElement) {
-                // openerElement is the element on which popup was initialized, in this case its <a> tag 
-                // you don't need to add "opener" option if this code matches your needs, it's defailt one. 
+                // openerElement is the element on which popup was initialized, in this case its <a> tag
+                // you don't need to add "opener" option if this code matches your needs, it's defailt one.
                 return openerElement.is('i') ? openerElement : openerElement.find('i');
             }
         }
@@ -166,16 +166,16 @@ function isotope() {
 
     var $container = $('#portfolio');
 
-    // init 
+    // init
     $container.imagesLoaded(function() {
         $container.isotope({
-            // options 
+            // options
             itemSelector: '.portfolio-item',
             layoutMode: 'fitRows'
         });
     });
 
-    // filter items on button click 
+    // filter items on button click
     $('#filters').on('click', 'button', function(event) {
         var filterValue = $(this).attr('data-filter-value');
         $container.isotope({ filter: filterValue });
@@ -285,7 +285,7 @@ function loginOverlay() {
 }
 
 
-//Placeholder fixed for Internet Explorer 
+//Placeholder fixed for Internet Explorer
 $(function() {
     var input = document.createElement("input");
     if (('placeholder' in input) == false) {
@@ -319,21 +319,21 @@ $(function() {
 
 
 
-/* 
-  Jquery Validation using jqBootstrapValidation 
-   example is taken from jqBootstrapValidation docs 
+/*
+  Jquery Validation using jqBootstrapValidation
+   example is taken from jqBootstrapValidation docs
   */
 $(function() {
 
     $("input,textarea").jqBootstrapValidation({
         preventSubmit: true,
         submitError: function($form, event, errors) {
-            // something to have when submit produces an error ? 
-            // Not decided if I need it yet 
+            // something to have when submit produces an error ?
+            // Not decided if I need it yet
         },
         submitSuccess: function($form, event) {
-            event.preventDefault(); // prevent default submit behaviour 
-            // get values from FORM 
+            event.preventDefault(); // prevent default submit behaviour
+            // get values from FORM
             var first_name = $("input#first_name").val();
             var last_name = $("input#last_name").val();
             var email = $("input#email").val();
@@ -357,16 +357,16 @@ $(function() {
                 },
                 cache: false,
                 success: function() {
-                    // Success message 
+                    // Success message
                     $('#success').html("<div class='alert alert-success'>");
                     $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;").append("</button>");
                     $('#success > .alert-success').append("<strong>Tu mensaje ha sido enviado.</strong>");
                     $('#success > .alert-success').append('</div>');
-                    //clear all fields 
+                    //clear all fields
                     $('#contactForm').trigger("reset");
                 },
                 error: function() {
-                    // Fail message 
+                    // Fail message
                     $('#success').html("<div class='alert alert-danger'>");
                     $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;").append("</button>");
                     var msg = "<strong>Disculpa " + first_name +
@@ -375,7 +375,7 @@ $(function() {
                     console.log("msg: " + msg);
                     $('#success > .alert-danger').append(msg);
                     $('#success > .alert-danger').append('</div>');
-                    //clear all fields 
+                    //clear all fields
                     $('#contactForm').trigger("reset");
                 },
             })
@@ -397,7 +397,7 @@ $('#name').focus(function() {
     $('#success').html('');
 });
 
-// jQuery for page scrolling feature - requires jQuery Easing plugin 
+// jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
@@ -408,17 +408,17 @@ $(function() {
     });
 });
 
-// Highlight the top nav as scrolling occurs 
+// Highlight the top nav as scrolling occurs
 $('body').scrollspy({
     target: '.navbar-fixed-top'
 })
 
-// Closes the Responsive Menu on Menu Item Click 
+// Closes the Responsive Menu on Menu Item Click
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
 
-//jQuery to collapse the navbar on scroll 
+//jQuery to collapse the navbar on scroll
 $(window).scroll(function() {
     if ($(".navbar").offset().top > 50) {
         $(".navbar-fixed-top").addClass("top-nav-collapse");

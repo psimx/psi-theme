@@ -1,6 +1,7 @@
 body {
   background: #f6f6f6;
   font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-rendering: optimizeLegibilityi !important;
 }
 .no-padding {
   padding: 0 !important;
@@ -114,6 +115,7 @@ a:hover {
 blockquote {
   border-left: none;
 }
+
 .colour-white {
   color: white !important;
 }
@@ -1517,12 +1519,53 @@ section .overlay-text {
   min-height: 340px;
   background: url('../img/cards.jpg') center center no-repeat !important;
   background-size: cover !important;
+}
 
-  -webkit-filter: blur(2px);
-  -moz-filter: blur(2px);
-  -o-filter: blur(2px);
-  -ms-filter: blur(52px);
-  filter: blur(2px);
+.pay-ul {
+  list-style: none;
+  padding: 0;
+}
+.pay-li{
+  padding-left: 1.3em;
+}
+.pay-li:before{
+  content: "\f00c"; /* FontAwesome Unicode */
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: -1.3em; /* same as padding-left set on li */
+  width: 1.3em; /* same as padding-left set on li */
+}
+.tc-ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+}
+.tc-ul li {
+  display: inline;
+}
+.tc-ul li.visa, .tc-ul li.mastercard, .tc-ul li.amex {
+  background-image: url(../img/credit_card_icons.jpg);
+  background-repeat: no-repeat;
+}
+.tc-ul li.visa {
+  height: 38px;
+  width: 54px;
+  display: inline-block;
+  background-position: -308px -128px;
+}
+.tc-ul li.mastercard {
+  height: 38px;
+  width: 54px;
+  display: inline-block;
+  background-position: -458px -181px;
+}
+.tc-ul li.amex {
+  height: 38px;
+  width: 54px;
+  display: inline-block;
+  background-position: -674px -291px;
 }
 #terapias .carousel .carousel-control {
   font-size: 3em;
@@ -2466,7 +2509,16 @@ footer.footer .icon {
   border-bottom: 1px solid #d2d2d2;
   border-top: 1px solid #d2d2d2;
   overflow: hidden;
-  font-size: x-small;
+  font-size: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.post-meta {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 #psi ul li {
