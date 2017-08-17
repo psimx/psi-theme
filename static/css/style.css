@@ -151,7 +151,22 @@ ol.second > li a:before {
 
 @media (max-width: 767px){
   .post-header{
-    width: 90% !important;
+    background-image: url(../img/casita_512x180.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    text-align: center;
+  }
+  section.light.with-bg {
+    background: url('../img/casita_512x180.jpg') center center no-repeat;
+    background-size: cover;
+  }
+  section.dark {
+    background: #2b2d35;
+  }
+  section.dark.with-bg {
+    background: url('../img/casita_512x180.jpg') center center no-repeat;
+    background-size: cover;
   }
 }
 

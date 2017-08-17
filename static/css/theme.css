@@ -2486,6 +2486,13 @@ footer.footer .icon {
   .overlay #contactForm input {
     padding: 1.5em 1em;
   }
+  .post-header{
+    background-image: url(../img/casita_512x180.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    text-align: center;
+  }
 }
 
 .cv-data p {

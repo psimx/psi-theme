@@ -1,3 +1,13 @@
+<div itemscope itemtype="http://schema.org/Organization" style="display:none;">
+  <span itemprop="name">{{ .Site.Title }}</span>
+  <img src="{{ .Site.BaseURL }}{{ with .Site.Params.og_image }}{{ . }}{{ end }}" itemprop="logo" />
+  <a href="{{ .Site.BaseURL }}" itemprop="url">Website</a>
+  Siguenos en
+  <a href="{{ with .Site.Params.social.twitter }}{{ . }}{{ end }}" itemprop="sameAs">Twitter</a>,
+  <a href="{{ with .Site.Params.social.facebook }}{{ . }}{{ end }}" itemprop="sameAs">Facebook</a>,
+  <a href="{{ with .Site.Params.social.plus }}{{ . }}{{ end }}" itemprop="sameAs">Google+</a> and
+  <a href="{{ with .Site.Params.social.linkedin }}{{ . }}{{ end }}" itemprop="sameAs">LinkedIn</a>.
+</div>
 
   {{ "<!-- Corporate contacts  -->" | safeHTML }}
     <script type="application/ld+json">
@@ -18,16 +28,16 @@
           "{{ with .Site.Params.social.plus }}{{ . }}{{ end }}",
           "{{ with .Site.Params.social.twitter }}{{ . }}{{ end }}",
           "{{ with .Site.Params.social.facebook }}{{ . }}{{ end }}",
-          "{{ with .Site.Params.social.linkedin }}{{ . }}{{ end }}",
+          "{{ with .Site.Params.social.linkedin }}{{ . }}{{ end }}"
         ]
       }
     </script>
     <script type="application/ld+json">
-	{
-		"@context": "http://schema.org",
-		"@id": "{{ .Site.BaseURL }}#webpage",
-		"@type": "WebPage",
-		"url": "{{ .Site.BaseURL }}",
-    "name": "{{ .Site.Title }}"
-	}
+    {
+      "@context": "http://schema.org",
+      "@id": "{{ .Site.BaseURL }}#webpage",
+      "@type": "WebPage",
+      "url": "{{ .Site.BaseURL }}",
+      "name": "{{ .Site.Title }}"
+    }
 </script>
