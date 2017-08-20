@@ -1,212 +1,36 @@
-.item-servicios {
-   min-height: 250px;
+.item-servicios{min-height:250px;}
+.item-servicios ul li{color:#FFFFFF;}
+.circle{width:135px;height:135px;border-radius:150px;-webkit-border-radius:150px;-moz-border-radius:150px;box-shadow:0 0 8px rgba(0, 0, 0, .8);-webkit-box-shadow:0 0 8px rgba(0, 0, 0, .8);-moz-box-shadow:0 0 8px rgba(0, 0, 0, .8);margin-top:-40px;margin-left:2px;}
+.mom{background:url(../img/mom_170x170.jpg) no-repeat;}
+.kids{background:url(../img/kids_170x170.jpg) no-repeat;}
+.baby{background:url(../img/aprendizaje_170x170.jpg) no-repeat;}
+#art-home a:hover{color:#EE9AAA!important;background-color:rgba(238, 154,170,0.1) !important;text-decoration:none !important;}
+.desaturate{-webkit-filter:grayscale(100%);filter:grayscale(100%);filter:gray;filter:url(desaturate.svg#greyscale);}
+.title h2{font-size:34px;text-align:center;text-transform:capitalize;}
+#terapias-carousel{padding-top:60px;padding-bottom:40px;}
+.terapia-caption{color:#000;position:static;}
+.item-terapia{display:block;}
+.clinica ol{counter-reset:li;list-style:none;*list-style:decimal;font:15px 'trebuchet MS', 'lucida sans';padding:0;margin-bottom:4em;text-shadow:0 1px 0 rgba(255,255,255,.5);}
+.clinica ol ol{margin:0 0 0 2em;}
+.rounded-list a{position:relative;display:block;padding:.4em .4em .4em 2em;*padding:.4em;margin:.5em 0;background:#ddd;color:#444;text-decoration:none;border-radius:.3em;transition:all .3s ease-out;}
+.rounded-list li{counter-increment:item;content:counter(item) ". ";}
+ol.second > li a:before{content:attr(seq);}
+.rounded-list a:hover{background:#eee;}
+.rounded-list a:hover:before{transform:rotate(360deg);}
+.rounded-list a:before{content:counter(li);counter-increment:li;position:absolute;left:-1.3em;top:50%;margin-top:-1.3em;background:#87ceeb;height:2em;width:2em;line-height:2em;border:.3em solid #fff;text-align:center;font-weight:bold;border-radius:2em;transition:all .3s ease-out;}
+.contact{margin-top:30px;text-align:center;font-size:large;}
+.copy{text-align:center;font-size:x-small;}
+.schedule{text-align:center;font-size:14px;}
+.icon-time{color:white;}
+.post-header{padding:22em 0 2em;background-color:#141d27;background-image:url(../img/casita_1482x988.jpg);background-size:cover;background-attachment:fixed;color:#fff;text-align:center;}
+@media (max-width:767px){.post-header{width:90% !important;}
 }
-.item-servicios ul li {
-   color: #FFFFFF;
-}
-.circle{
-    width: 135px;
-    height: 135px;
-    border-radius: 150px;
-    -webkit-border-radius: 150px;
-    -moz-border-radius: 150px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-    -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-    margin-top: -40px;
-    margin-left: 2px;
-
-}
-.mom {
-    background: url(../img/mom_170x170.jpg) no-repeat;
-}
-.kids {
-    background: url(../img/kids_170x170.jpg) no-repeat;
-}
-.baby {
-    background: url(../img/aprendizaje_170x170.jpg) no-repeat;
-}
-
-#art-home a:hover {
-    color: #EE9AAA!important;
-    background-color: rgba(238, 154,170,0.1) !important;
-    text-decoration: none !important;
-}
-
-.desaturate {
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-    filter: gray;
-    filter: url(desaturate.svg#greyscale);
-}
-
-.title h2 {
-   font-size: 34px;
-   text-align: center;
-   text-transform: capitalize;
-}
-
-#terapias-carousel{
-  padding-top : 60px;
-  padding-bottom : 40px;
-}
-.terapia-caption{
-  color:#000;
-  position:static;
-}
-
-.item-terapia{
-  display:block;
-}
-
-.clinica ol {
-  counter-reset: li; /* Initiate a counter */
-  list-style: none; /* Remove default numbering */
-  *list-style: decimal; /* Keep using default numbering for IE6/7 */
-  font: 15px 'trebuchet MS', 'lucida sans';
-  padding: 0;
-  margin-bottom: 4em;
-  text-shadow: 0 1px 0 rgba(255,255,255,.5);
-}
-
-.clinica ol ol {
-  margin: 0 0 0 2em; /* Add some left margin for inner lists */
-}
-.rounded-list a{
-  position: relative;
-  display: block;
-  padding: .4em .4em .4em 2em;
-  *padding: .4em;
-  margin: .5em 0;
-  background: #ddd;
-  color: #444;
-  text-decoration: none;
-  border-radius: .3em;
-  transition: all .3s ease-out;
-}
-
-.rounded-list li {
-  counter-increment: item;
-  content: counter(item) ". ";
-}
-
-ol.second > li a:before {
-    content: attr(seq);
-}
-
-.rounded-list a:hover{
-  background: #eee;
-}
-
-.rounded-list a:hover:before{
-  transform: rotate(360deg);
-}
-
-.rounded-list a:before{
-  content: counter(li);
-  counter-increment: li;
-  position: absolute;
-  left: -1.3em;
-  top: 50%;
-  margin-top: -1.3em;
-  background: #87ceeb;
-  height: 2em;
-  width: 2em;
-  line-height: 2em;
-  border: .3em solid #fff;
-  text-align: center;
-  font-weight: bold;
-  border-radius: 2em;
-  transition: all .3s ease-out;
-}
-
-.contact {
-  margin-top: 30px;
-  text-align: center;
-  font-size: large;
-}
-/* .contact .icon {
-  font-size: 18px !important;
-}*/
-.copy{
-  text-align: center;
-  font-size: x-small;
-}
-.schedule {
-  text-align:center;
-  font-size: 14px;
-}
-.icon-time {
-  color: white;
-}
-.post-header {
-  padding: 22em 0 2em;
-  background-color: #141d27;
-  background-image: url(../img/casita_1482x988.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-  color: #fff;
-  text-align: center;
-}
-
-@media (max-width: 767px){
-  .post-header{
-    background-image: url(../img/casita_512x180.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    color: #fff;
-    text-align: center;
-  }
-  section.light.with-bg {
-    background: url('../img/casita_512x180.jpg') center center no-repeat;
-    background-size: cover;
-  }
-  section.dark {
-    background: #2b2d35;
-  }
-  section.dark.with-bg {
-    background: url('../img/casita_512x180.jpg') center center no-repeat;
-    background-size: cover;
-  }
-}
-
-.post-menu{
-  background-color: #fff;
-  border-color: transparent;
-}
-
-time {
-  padding: 2px 15px 0 0;
-  float: right;
-}
-
-.banner-404 {
-  font-size: xx-large;
-  padding: 50px 0;
-}
-
-.meta-info{
-  margin: 30px;
-}
-.meta-info ul{
-    list-style: outside none none;
-    padding: 3px;
-}
-
-.meta-info ul li{
-display: inline-block;
-    margin-left: 5px;
-}
-
-.meta-info ul li::after{
-  color: #c7cad0;
-  content: "|";
-  margin-left: 10px;
-}
-
-.debug{
-  border: 1px solid red;
- }
- .debug-green{
-   border: solid 1px green;
-}
+.post-menu{background-color:#fff;border-color:transparent;}
+time{padding:2px 15px 0 0;float:right;}
+.banner-404{font-size:xx-large;padding:50px 0;}
+.meta-info{margin:30px;}
+.meta-info ul{list-style:outside none none;padding:3px;}
+.meta-info ul li{display:inline-block;margin-left:5px;}
+.meta-info ul li::after{color:#c7cad0;content:"|";margin-left:10px;}
+.debug{border:1px solid red;}
+.debug-green{border:solid 1px green;}
