@@ -2,7 +2,7 @@
    ---------------------------- */
 
 $(window).load(function() {
-    $('.preloader').fadeOut(10); // set duration in brackets
+    $('.preloader').fadeOut(2); // set duration in brackets
     tooltips();
 });
 
